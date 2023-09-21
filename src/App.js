@@ -2,11 +2,18 @@ import { useEffect } from 'react';
 import './App.css';
 
 function App() {
-  // https://api.quotable.io/random
 
   useEffect(() => {
+    getQuote();
+  }, [])
 
-  })
+  const getQuote = () => {
+    fetch('https://api.quotable.io/random')
+      .then(response => response.json())
+      .then((data) => {
+        console.log(data);
+      });
+  }
 
   return (
     <div className="App">
