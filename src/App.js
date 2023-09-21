@@ -25,7 +25,7 @@ function App() {
       <div id="quote-box">
         <p id="text">{quoteInfo.text}</p>
         <p id="author">{quoteInfo.author}</p>
-        <button id="new-quote">New Quote</button>
+        <button id="new-quote" onClick={getQuote}>New Quote</button>
         <a id="tweet-quote" href="twitter.com/intent/tweet" target="_blank">Tweet Quote</a>
       </div>
     </div>
